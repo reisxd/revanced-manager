@@ -174,7 +174,7 @@ class MainActivity : FlutterActivity() {
                             javaClass.classLoader
                         )
                     ).loadPatches().filter { patch ->
-                        patch.compatiblePackages!!.any { it.name == patcher.context.packageMetadata.packageName } &&
+                        patch.compatiblePackages?.any { it.name == patcher.context.packageMetadata.packageName } &&
                                 selectedPatches.any { it == patch.patchName }
                     }
                 } else {
